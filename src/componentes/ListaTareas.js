@@ -1,12 +1,12 @@
 import React from 'react'
 import TareaItem from './TareaItem';
 
-function ListaTareas({ lista }) {
+function ListaTareas({ lista, completarTarea, eliminarTarea }) {
     return (
-        <div>
+        <div className="tarea">
             {
                 lista.map((tarea) =>
-                    <TareaItem item={tarea} key={tarea.id} />
+                    <TareaItem item={tarea} key={tarea.id} completarTarea={completarTarea} eliminarTarea={eliminarTarea}/>
                 )
             }
         </div>
